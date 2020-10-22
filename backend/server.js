@@ -1,11 +1,15 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import connectDB from './config/db.js'
 import products from './data/products.js'
 
 //inicializa o .env
 dotenv.config()
 
-//initializar o express
+//realiza a conexão com o MongoDB
+connectDB()
+
+//inicializa o express
 const app = express()
 
 //porta do servidor
